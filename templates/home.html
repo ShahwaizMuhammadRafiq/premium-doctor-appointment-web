@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <img src="{{ url_for('static', filename='image1.jpg') }}" alt="Image 1" class="img-home">
+                <div class="slide-text">
+                    <h2>Quality Healthcare Services</h2>
+                    <p>Our Clinic is committed to delivering quality healthcare services to our community. With a focus on patient well-being and comfort, our dedicated team ensures that you receive the best possible care. Schedule your appointment today.</p>
+                    <a href="{{ url_for('bookappointment') }}" class="oval-button">Book Now</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="{{ url_for('static', filename='image2.jpg') }}" alt="Image 2" class="img-home">
+                <div class="slide-text">
+                    <h2>Compassionate Medical Professionals</h2>
+                    <p>At Our Clinic, our compassionate medical professionals are here to address your healthcare needs. We prioritize patient care and work towards creating a positive and healing environment. Your health is our mission.</p>
+                    <a href="{{ url_for('about') }}" class="oval-button">About Us</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="{{ url_for('static', filename='image3.jpg') }}" alt="Image 3" class="img-home">
+                <div class="slide-text">
+                    <h2>Compassionate Medical Professionals</h2>
+                    <p>At Our Clinic, our compassionate medical professionals are here to address your healthcare needs. We prioritize patient care and work towards creating a positive and healing environment. Your health is our mission.</p>
+                    <a href="{{ url_for('contact') }}" class="oval-button">Contact Us</a>
+                </div>
+            </div>
+        </div>
+        <button class="prev" onclick="prevSlide()">❮</button>
+        <button class="next" onclick="nextSlide()">❯</button>
+
+{% endblock %}

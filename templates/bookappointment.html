@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}Book Appointment{% endblock %}
+
+{% block content %}
+<div class="token-box">
+    <h1>Token Number::</h1>
+    <p class="token-number">{{ session['token'] }}</p>
+</div>
+    <h1>Book an Appointment</h1>
+
+    <form method="POST" action="{{ url_for('bookappointment') }}">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required>
+
+        <label for="date">Date:</label>
+        <input type="date" name="date" required>
+
+        <label for="time">Time:</label>
+        <input type="time" name="time" required>
+        
+        <label for="phone_number">Phone Number:</label>
+        <input type="tel" name="phone_number" required>
+
+
+        <label for="doctor">Select a Doctor:</label>
+        <select name="doctor" required>
+            <option value="dr_shahwaiz">Dr. Shahwaiz</option>
+            <option value="dr_sufiyan">Dr. Sufiyan</option>
+            <option value="dr_sarmad">Dr. Sarmad</option>
+            <option value="dr_sarmad">Dr. Farzam</option>
+        </select>
+
+        <button type="submit">Book Appointment</button>
+    </form>
+{% endblock %}

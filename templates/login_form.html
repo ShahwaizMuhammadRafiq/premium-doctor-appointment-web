@@ -1,0 +1,18 @@
+<div class="card">
+    <h4 class="title">Log In!</h4>
+    <form method="POST" action="{{ url_for('login') }}">
+      <div class="field">
+        <svg class="input-icon" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+        </svg>
+        <input autocomplete="username" id="username" placeholder="Username" class="input-field" name="username" type="text">
+      </div>
+      <div class="field">
+        <svg class="input-icon" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+        </svg>
+        <input autocomplete="current-password" id="password" placeholder="Password" class="input-field" name="password" type="password">
+      </div>
+      <button class="btn" type="submit">Login</button>
+      <a href="#" class="btn-link">Forgot your password?</a>
+    </form>
+  </div>
+  

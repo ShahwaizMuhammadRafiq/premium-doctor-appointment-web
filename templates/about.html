@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+    <div class="about-container">
+        <h1>About SSS Clinic</h1>
+        <p>Welcome to SSS Clinic, where your health is our priority. Our team of dedicated doctors and staff are committed to providing top-notch medical care.</p>
+
+        <h2>Meet Our Doctors</h2>
+        <div class="doctors">
+            <div class="doctor">
+                <img src="{{ url_for('static', filename='doctor1.jpg') }}" alt="Doctor 1">
+                <div class="doctor-info">
+                    <h3>Dr.Shahwaiz Muhammad Rafiq</h3>
+                    <p>Specialty: Cardiology</p>
+                    <p>Day:- Monday to Friday Timing:-10am-9pm</p>
+                    <p>Dr. Shahwaiz brings a wealth of expertise and commitment to the field of cardiology, boasting over 15 years of invaluable experience. As a seasoned professional, he is deeply passionate about safeguarding and enhancing the heart health of his patients. Driven by a dedication to excellence, he stays at the forefront of medical advancements, ensuring that his patients receive the most comprehensive and cutting-edge cardiac care available. With a compassionate approach, Dr. Shahwaiz continues to make a significant impact on the well-being of those entrusting him with their cardiovascular health.</p>
+                </div>
+            </div>
+            <div class="doctor">
+                <img src="{{ url_for('static', filename='doctor2.jpg') }}" alt="Doctor 2">
+                <div class="doctor-info">
+                    <h3>Dr. Sufiyan Imran </h3>
+                    <p>Specialty: Pediatrics</p>
+                    <p>Day:- Monday to Friday Timing:-9am-9pm</p>
+                    <p>
+                        Dr. Sufiyan's unwavering commitment to pediatric care spans from the earliest stages of infancy to the critical adolescent years. With a profound passion for nurturing children's health and well-being, he approaches each case with a blend of medical expertise and genuine empathy. Dr. Sufiyan is dedicated to fostering a positive and supportive environment for both young patients and their families, working tirelessly to address their unique healthcare needs. His holistic approach and focus on preventive care reflect his dedication to ensuring a healthy and vibrant future for every child under his compassionate care.</p>
+                </div>
+            </div>
+            <div class="doctor">
+                <img src="{{ url_for('static', filename='doctor2.jpg') }}" alt="Doctor 3">
+                <div class="doctor-info">
+                    <h3>Dr.Sarmad Arshad Hussani</h3>
+                    <p>Specialty: Internal Medicine</p>
+                    <p>Day:- Monday to Friday Timing:-11am-9pm</p>
+                    <p>With a steadfast commitment to adult healthcare, Dr. Sarmad stands as a dedicated practitioner devoted to offering comprehensive services. Specializing in preventive care and chronic disease management, he strives to empower his patients with the knowledge and tools necessary for maintaining optimal health. Dr. Sarmad's approach is rooted in a deep understanding of the importance of proactive measures, working collaboratively with individuals to prevent illnesses and effectively manage chronic conditions. His patient-centric philosophy ensures that each person under his care receives personalized attention, fostering a healthier and more resilient adult population under his guidance.</p>
+                </div>
+            </div>
+        </div>
+        <div class="doctor">
+            <img src="{{ url_for('static', filename='doctor4.png') }}" alt="Doctor 4">
+            <div class="doctor-info">
+                <h3>Dr.Muhammad Farzam Nazim</h3>
+                <p>Specialty: Neurologist</p>
+                <p>Day:- Monday to Friday Timing:-1pm-9pm</p>
+                <p>Dedicated to advancing neurological care, Dr. Muhammad Farzam Nazim is a seasoned neurologist with a profound commitment to patient well-being. With a wealth of experience in the field, Dr. Nazim specializes in diagnosing and treating a broad spectrum of neurological disorders. His practice places a strong emphasis on personalized and compassionate care, ensuring that each patient receives tailored treatment plans that address their unique needs. Driven by a passion for staying abreast of the latest advancements in neurology, he strives to provide cutting-edge solutions for his patients. Whether focusing on preventive measures or managing complex neurological conditions, Dr. Muhammad Farzam Nazim is unwavering in his dedication to promoting neurological health and enhancing the quality of life for those under his care.</p>
+            </div>
+        </div>
+    </div>
+
+        <h2>Our Mission</h2>
+        <p>At SSS Clinic, our mission is to provide compassionate and comprehensive healthcare services to our community. We strive to deliver personalized care tailored to the unique needs of each patient.At SSS Clinic, our mission is not just a statement; it's a commitment to providing outstanding healthcare services that positively impact the lives of those we serve. We measure our success by the health and satisfaction of our patients and the vitality of our community.</p>
+        <p1>Feel free to tailor this mission statement to align with the specific values and goals of SSS Clinic.</p1>
+    </div>
+{% endblock %}

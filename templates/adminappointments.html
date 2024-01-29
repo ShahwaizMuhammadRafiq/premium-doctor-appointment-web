@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Admin Appointments{% endblock %}
+
+{% block content %}
+    <div class="appointment-container">
+        <h1>Appointments</h1>
+        <ul>
+            {% for appointment in appointments %}
+                <li>
+                    {{ appointment.name }} - {{ appointment.date }} - {{ appointment.time }} - {{ appointment.doctor }} - {{ appointment.phonenumber }}  - {{ appointment.tokennumber }}
+                    <a href="{{ url_for('admineditappointment', token=appointment.token) }}">Edit</a>
+                    <a href="{{ url_for('adminremoveappointment', token=appointment.token) }}">Remove</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="doctor-info">
+        <h3>Dr.Shahwaiz Muhammad Rafiq</h3>
+        <p>Specialty: Cardiology</p>
+        <p>Day:- Monday to Friday Timing:-10am-9pm</p>
+    </div>
+    <div class="doctor-info">
+        <h3>Dr. Sufiyan Imran </h3>
+        <p>Specialty: Pediatrics</p>
+        <p>Day:- Monday to Friday Timing:-9am-9pm</p>
+    </div>
+    <div class="doctor-info">
+        <h3>Dr.Sarmad Arshad Hussani</h3>
+        <p>Specialty: Internal Medicine</p>
+        <p>Day:- Monday to Friday Timing:-11am-9pm</p>       
+    </div>
+    <div class="doctor-info">
+        <h3>Dr.Muhammad Farzam Nazim</h3>
+        <p>Specialty: Neurologist</p>
+        <p>Day:- Monday to Friday Timing:-1pm-9pm</p>   
+    </div>
+{% endblock %}

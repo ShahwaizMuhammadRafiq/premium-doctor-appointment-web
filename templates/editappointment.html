@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit Appointment{% endblock %}
+
+{% block content %}
+    <h1>Edit Appointment</h1>
+    <form method="POST" action="{{ url_for('editappointment', index=index) }}">
+        <label for="name">Name:</label>
+        <input type="text" name="name" value="{{ appointment['name'] }}" required>
+
+        <label for="date">Date:</label>
+        <input type="date" name="date" value="{{ appointment['date'] }}" required>
+
+        <label for="time">Time:</label>
+        <input type="time" name="time" value="{{ appointment['time'] }}" required>
+
+        <label for="doctor">Select Doctor:</label>
+<select name="doctor" required>
+    {% for doctor in doctors %}
+        <option value="{{ doctor }}">{{ doctor }}</option>
+    {% endfor %}
+</select>
+
+
+
+        <button type="submit">Update Appointment</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit Appointment{% endblock %}
+
+{% block content %}
+    <h1>Edit Appointment</h1>
+    <form method="POST" action="{{ url_for('admineditappointment', token=appointment.token) }}">
+
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" name="name" value="{{ appointment.get('name', '') }}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="date">Date:</label>
+            <input type="date" name="date" value="{{ appointment.get('date', '') }}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="time">Time:</label>
+            <input type="time" name="time" value="{{ appointment.get('time', '') }}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone_number">Number:</label>
+            <input type="tel" name="phone_number" value="{{ appointment.get('phonenumber', '') }}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="doctor">Select Doctor:</label>
+            <select name="doctor" required>
+                {% for doctor in doctors %}
+                    <option value="{{ doctor }}" {% if appointment.get('doctor', '') == doctor %}selected{% endif %}>
+                        {{ doctor }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <button type="submit">Update Appointment</button>
+    </form>
+{% endblock %}

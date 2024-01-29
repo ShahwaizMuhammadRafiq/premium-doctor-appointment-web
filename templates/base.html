@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='canimate.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-rm8RizpN7ovS1TLX0N+9Q5Ls9o3U5/5bRTtSbWxp5q8r4mrq4li3FtrGJJ6cFh" crossorigin="anonymous">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+    <title>{% block title %}SSS Clinic{% endblock %}</title>
+</head>
+
+<body>
+    <div class="loader-container">
+        <div class="loader">
+            <svg viewBox="0 0 80 80">
+                <circle id="test" cx="40" cy="40" r="32"></circle>
+            </svg>
+        </div>
+
+        <div class="loader triangle">
+            <svg viewBox="0 0 86 80">
+                <polygon points="43 8 79 72 7 72"></polygon>
+            </svg>
+        </div>
+
+        <div class="loader">
+            <svg viewBox="0 0 80 80">
+                <rect x="8" y="8" width="64" height="64"></rect>
+            </svg>
+        </div>
+    </div>
+
+    <div class="content" id="content" style="display: none;">
+        <header>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="{{ url_for('home') }}">
+                        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+                    </a>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('bookappointment') }}">Book Appointment</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('about') }}">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('contact') }}">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('services') }}">Services</a>
+                            </li>
+                                <div class="nav-item">
+                                    <a class="nav-link" href="{{ url_for('login') }}">
+                                        <img src="{{ url_for('static', filename='login.png') }}" alt="Login">
+                                    </a>
+                                    
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+        <footer data-stellar-background-ratio="5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 right-section">
+                        <div class="footer-thumb"> 
+                            <h4 class="wow fadeInUp" data-wow-delay="0.4s">Contact Info</h4>
+                            <p></p>
+                            <div class="contact-info">
+                                <p><i class="fa fa-phone"></i> 090078601</p>
+                                <p><i class="fa fa-envelope-o"></i> <a href="#">info@sslclinic.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-6 col-sm-6 right-section">
+                        <div class="footer-thumb">
+                            <div class="opening-hours">
+                                <h4 class="wow fadeInUp" data-wow-delay="0.4s">Opening Hours</h4>
+                                <p>Monday - Friday <span>06:00 AM - 10:00 PM</span></p>
+                                <p>Saturday <span>09:00 AM - 08:00 PM</span></p>
+                                <p>Sunday <span>Closed</span></p>
+                            </div> 
+                            <ul class="social-icon">
+                                <li><a href="https://www.facebook.com/shahwaizmuhammadrafiq" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                                <li><a href="https://www.twitter.com/shahwaizmuhammadrafiq" class="fa fa-twitter"   attr="twitter icon"></a></li>
+                                <li><a href="https://www.instagram.com/shahwaizmuhammadrafiq" class="fa fa-instagram" attr="instagram icon"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-12 col-sm-12 border-top">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="copyright-text"> 
+                                <p>Copyright &copy; 2023 SSLClinic | Design: <a href="http://www.fasttechnoltd.com" target="_parent">FastTechnoLtd</a></p>
+                            </div>
+                        <div class="col-md-2 col-sm-2 text-align-center">
+                            <div class="angle-up-btn"> 
+                                <a href="#top" class="smoothScroll wow fadeInUp" data-wow-delay="1.2s"><i class="fa fa-angle-up"></i></a>
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+        </footer>
+</html>
